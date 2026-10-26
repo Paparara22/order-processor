@@ -7,9 +7,13 @@ class Discount(ABC):
         pass
 
 class SeasonalDiscount(Discount):
+    """
+    Класс для расчета сезонной скидки.
+    Применяет скидку 10% к стоимости заказа.
+    """
     def apply(self, price):
-        return price * 0.9  # Сезонная скидка 10%
-
+        return price * 0.9 # Сезонная скидка 10%
+ 
 class LoyaltyDiscount(Discount):
     def apply(self, price):
         return price * 0.95 # Накопительная скидка 5%
